@@ -4,6 +4,7 @@ import React from "react";
 import AccountScreen from "../screens/AccountScreen";
 import FaqScreen from "../screens/FaqScreen";
 import NewsFeedScreen from "../screens/NewsFeedScreen";
+import test from "../screens/test";
 
 const BottomTab = createBottomTabNavigator();
 export function BottomTabNavigator() {
@@ -50,6 +51,18 @@ export function BottomTabNavigator() {
           ),
         }}
       />
+
+    
+<BottomTab.Screen
+        name="lucas"
+        component={test}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <Ionicons name="person-outline" size={size} color={color} />
+          ),
+        }}
+      />
+
     </BottomTab.Navigator>
   );
 }

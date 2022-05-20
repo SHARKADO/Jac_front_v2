@@ -1,10 +1,28 @@
 import { SafeAreaView, Text, View, StyleSheet, ScrollView } from "react-native";
+import {useEffect} from "react";
+import axios from "axios";
 
 import React from "react";
 import FaqData from "../faqdata.json";
 import FaqComponent from "../components/FaqComponent";
 
 export default function FaqScreen() {
+  useEffect(() => {
+    const url = `http://localhost:8080/questions`;
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get(url, {headers: { Authorization: "blabla" }});
+        console.log(response.data);
+      } catch (error) {
+        if(axios.isCancel(error)){
+          console.log('Data fetching cancelled');
+        }else{
+         // Handle error
+        }
+      }
+    };
+    fetchUsers();
+  }, [userId]);
   return (
     <SafeAreaView>
       <View style={styles.container}>

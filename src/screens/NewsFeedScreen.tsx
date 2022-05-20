@@ -15,13 +15,13 @@ import { RFPercentage } from "react-native-responsive-fontsize";
 import EventComponent from "../components/EventComponent";
 import { EventInfo } from "../types/data";
 
-export default function NewsFeedScreen() {
+export default function NewsFeedScreen({navigation, route}) {
   return (
     <SafeAreaView>
       <View style={styles.container}>
         <View style={styles.nameFilter}>
           <Text style={styles.title}>Bonjour Guillaume</Text>
-          <TouchableOpacity style={styles.btnFilter}>
+          <TouchableOpacity style={styles.btnFilter} onPress = {() => navigation.navigate("lucas", {})}>
             <Feather name="filter" size={25} color="#172B4D" />
           </TouchableOpacity>
         </View>
