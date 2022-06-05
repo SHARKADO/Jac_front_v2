@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text, Button } from "react-native";
 
-const url = "172.28.24.39"
+const url = "192.168.84.210"
 function test (props: any) {
     async function getQuestions () {
         const response = fetch('http://' + url + ':3000/', {
@@ -12,7 +12,8 @@ function test (props: any) {
         }
       });
       const json = await (await response).json();
-      settext (json)
+      console.log(json)
+      settext (json['Hello World!'])
       };
     const [text, settext ] = React.useState("1")
   return (
