@@ -51,18 +51,6 @@ export function BottomTabNavigator() {
           ),
         }}
       />
-
-    
-<BottomTab.Screen
-        name="lucas"
-        component={test}
-        options={{
-          tabBarIcon: ({ size, color }) => (
-            <Ionicons name="person-outline" size={size} color={color} />
-          ),
-        }}
-      />
-
     </BottomTab.Navigator>
   );
 }
